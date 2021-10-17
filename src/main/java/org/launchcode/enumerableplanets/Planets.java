@@ -10,4 +10,13 @@ public enum Planets {
     URANUS("Uranus"),
     NEPTUNE("Neptune");
 
+    public final String name;
+
+    Planets(String name) {
+        this.name = name;
+    }
+
+    public String getName() {
+        return name;
+    }
 }
