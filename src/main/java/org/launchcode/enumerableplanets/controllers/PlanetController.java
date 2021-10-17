@@ -10,7 +10,7 @@ public class PlanetController {
 
     @GetMapping
     public String displayIndex(Model model) {
-        model.addAttribute("Planets", Planets.values());
+        model.addAttribute("planets", Planets.values());
         return "index";
     }
 }

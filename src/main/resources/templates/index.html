@@ -10,7 +10,23 @@
 <body>
 <h1>Pick a planet:</h1>
     <ul>
-        <li th:each = "planet : ${Planets.values()}" th:text="${planet.name}"></li>
+        <li th:each = "planet : ${planets}" th:text="${planet.name}"></li>
     </ul>
+<table class="table">
+    <thead>
+        <th>Planet name</th>
+        <th>Length of year, in Earth days</th>
+        <th>Distance to the Sun, in AU</th>
+        <th>Mass, relative to Earth's mass</th>
+    </thead>
+    <tbody>
+    <tr th:each = "planet : ${planets}">
+        <td th:text="${planet.name}"></td>
+        <td th:text="${planet.yearLength}"></td>
+        <td th:text="${planet.distanceFromSun}"></td>
+        <td th:text="${planet.mass}"></td>
+    </tr>
+    </tbody>
+</table>
 </body>
 </html>
